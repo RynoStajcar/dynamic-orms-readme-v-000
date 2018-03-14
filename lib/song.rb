@@ -10,6 +10,7 @@ class Song
   end
 
   def self.column_names
+    binding.pry
     DB[:conn].results_as_hash = true
 
     sql = "pragma table_info('#{table_name}')"
